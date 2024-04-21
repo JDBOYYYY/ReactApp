@@ -1,0 +1,16 @@
+﻿.logo{
+    width:35px;
+    height:35px;
+    margin-right:10px;
+}
+a{
+    text-decoration:none;
+    color:unset;
+}
+.button-print{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 30px 10px 30px 10px;
+    align-items: center;
+}

@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\layout\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\layout\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\pracownik\\pracownicypage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\pracownik\\pracownicypage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\pracownik\\pracownikpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\pracownik\\pracownikpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\towar\\towarpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\towar\\towarpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\towar\\towarypage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\towar\\towarypage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\towar\\towarypage.tsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\towar\\towarypage.tsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|c:\\users\\szymo\\desktop\\interfejsy\\reactapp\\reactapp.client\\src\\towar\\towarpage.tsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3A9F7B08-E014-4F86-9D8F-3C5C2A9A337A}|reactapp.client\\reactapp.client.esproj|solutionrelative:reactapp.client\\src\\towar\\towarpage.tsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\App.css",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\App.css",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\App.css",
+              "RelativeToolTip": "reactapp.client\\src\\App.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-27T18:33:18.86Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\index.css",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\index.css",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\index.css",
+              "RelativeToolTip": "reactapp.client\\src\\index.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-27T18:33:45.828Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\App.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\App.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\App.tsx",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBkAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-27T18:11:42.756Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\main.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\main.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\main.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\main.tsx",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-27T17:56:22.158Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PracownicyPage.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\pracownik\\PracownicyPage.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\pracownik\\PracownicyPage.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\pracownik\\PracownicyPage.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\pracownik\\PracownicyPage.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-04-14T14:13:05.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "layout.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\layout\\layout.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\layout\\layout.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\layout\\layout.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\layout\\layout.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-04-14T09:44:49.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PracownikPage.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\pracownik\\PracownikPage.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\pracownik\\PracownikPage.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\pracownik\\PracownikPage.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\pracownik\\PracownikPage.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-04-14T14:06:21.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TowaryPage.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAFwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-04-14T09:21:54.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\index.html",
+              "RelativeDocumentMoniker": "reactapp.client\\index.html",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\index.html",
+              "RelativeToolTip": "reactapp.client\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-27T18:35:32.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TowaryPage.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\towar\\TowaryPage.tsx",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwHMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-27T18:09:45.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TowarPage.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowarPage.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\towar\\TowarPage.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowarPage.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\towar\\TowarPage.tsx",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-04-14T09:21:46.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TowarPage.tsx",
+              "DocumentMoniker": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowarPage.tsx",
+              "RelativeDocumentMoniker": "reactapp.client\\src\\towar\\TowarPage.tsx",
+              "ToolTip": "C:\\Users\\szymo\\Desktop\\interfejsy\\ReactApp\\reactapp.client\\src\\towar\\TowarPage.tsx",
+              "RelativeToolTip": "reactapp.client\\src\\towar\\TowarPage.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-03-27T18:07:18.222Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

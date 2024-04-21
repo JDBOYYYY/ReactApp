@@ -1,0 +1,57 @@
+.containerClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.login-form{
+    margin-left: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+.logo{
+    width: 200px;
+    height:200px;
+    margin-right:10px;
+}
+.logo-layout{
+    width: 50px;
+    height:50px;
+    margin-right:10px;
+}
+/* table tr:hover td {
+    background-color: lightblue;
+  } */
+.mainPageText{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    /* margin-left: 10vh; */
+    text-align: left;
+}
+
+.card-hover {
+    width: 18rem;
+    margin: 20px;
+    flex: 1;
+    height: 400px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: scale(1.05);
+    background-color: #f8f9fa; /* Change this color to whatever you prefer */
+}
