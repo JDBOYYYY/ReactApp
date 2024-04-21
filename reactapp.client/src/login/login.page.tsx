@@ -85,11 +85,6 @@ export function Login() {
                             Register
                         </Button>
                     </div>
-                    <Link to="/" className="d-block" style={{marginLeft:'20px',marginTop:'15px'}}>
-                        <Button variant="primary" type="submit" >
-                            Back
-                        </Button>
-                    </Link>
                 </Form>
                 </Col>
             </Row>
