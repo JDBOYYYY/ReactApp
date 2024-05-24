@@ -1,11 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
-import {Col, Container, Row, Table } from 'react-bootstrap';
+import { Col, Container, Row, Table } from 'react-bootstrap';
 import './TimeRecording.css';
 import WeekPicker from '../../components/WeekPicker';
 import EditButton from '../../components/editButton';
 import { Paper, Typography, Box, Button as MuiButton } from '@mui/material';
 import AddTimeEntryForm from './addTimeEntryForm';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import StartIcon from '@mui/icons-material/PlayArrow';
+import EndIcon from '@mui/icons-material/Stop';
+import BreakStartIcon from '@mui/icons-material/Coffee';
+import BreakEndIcon from '@mui/icons-material/CheckCircle';
+import OvertimeIcon from '@mui/icons-material/AccessTime';
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export const TimeRecording = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
@@ -74,6 +83,30 @@ export const TimeRecording = () => {
     setModalOpen(true);
   };
 
+  const data = {
+    labels: weekDates.map((date) => date.toLocaleDateString('en-US', { weekday: 'long' })),
+    datasets: [
+      {
+        label: 'Registered Time (hours)',
+        data: weekDates.map(() => Math.floor(Math.random() * 8)), // Example data
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: true,
+        text: 'Time Registered Per Day',
+      },
+    },
+  };
+
   return (
     <Container>
       <Row>
@@ -85,20 +118,50 @@ export const TimeRecording = () => {
           <Typography variant="h5" gutterBottom>
             Quick Entries
           </Typography>
-          <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
-            <MuiButton variant="contained" color="primary" className="button-width">
+          <Box display="grid" gridTemplateColumns="1fr 1fr" gap={2}>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className="button-width"
+              startIcon={<StartIcon />}
+              title="Start your shift"
+            >
               Start Shift
             </MuiButton>
-            <MuiButton variant="contained" color="primary" className="button-width">
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className="button-width"
+              startIcon={<EndIcon />}
+              title="End your shift"
+            >
               End Shift
             </MuiButton>
-            <MuiButton variant="contained" color="primary" className="button-width">
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className="button-width"
+              startIcon={<BreakStartIcon />}
+              title="Start your break"
+            >
               Break Start
             </MuiButton>
-            <MuiButton variant="contained" color="primary" className="button-width">
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className="button-width"
+              startIcon={<BreakEndIcon />}
+              title="End your break"
+            >
               Break End
             </MuiButton>
-            <MuiButton variant="contained" color="primary" className="button-width">
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className="button-width"
+              startIcon={<OvertimeIcon />}
+              title="Add overtime"
+            >
               Add Overtime
             </MuiButton>
           </Box>
@@ -217,6 +280,11 @@ export const TimeRecording = () => {
             handleAddEntry={handleAddEntry}
             existingEntry={editingEntry !== null ? entries[editingEntry] : null}
           />
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12}>
+          <Bar data={data} options={options} />
         </Col>
       </Row>
     </Container>

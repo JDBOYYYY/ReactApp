@@ -1,12 +1,9 @@
-.button-print {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .button-print h2 {
   margin: 0;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .table-responsive {

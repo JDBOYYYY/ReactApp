@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Row, Col, Table } from 'react-bootstrap';
+import YearPicker from '../../components/YearPicker';
 import './yearReport.css';
+import dayjs, { Dayjs } from 'dayjs';
 
 interface ReportData {
   month: string;
@@ -35,12 +37,18 @@ const data: ReportData[] = [
 ];
 
 export const YearReport: React.FC = () => {
+  const today = new Date();
+  const [currentDate, setCurrentDate] = useState<Dayjs>(dayjs(today));
+
   return (
     <Container fluid className="year-report-container">
       <Row className="mb-4">
         <Col>
           <h2>Yearly report</h2>
-          <p>Pawel Logasz (Software Development)</p>
+          <p>Szymon Zimonczyk (Software Development)</p>
+        </Col>
+        <Col>
+          <YearPicker currentDate={currentDate} onDateChange={setCurrentDate} />
         </Col>
         <Col className="text-end">
           <Button variant="success" className="me-2">Print</Button>

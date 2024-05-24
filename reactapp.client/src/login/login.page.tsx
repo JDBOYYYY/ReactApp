@@ -33,13 +33,14 @@ export function Login() {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={4} className="mb-3">
+                <Col xs={4}>
                     <Card style={{ width: '18rem', marginBottom:'20px' }}>
                         <Card.Img variant="top" src="image/card3.webp" />
                         <Card.Body>
                             <Card.Title>Calendar Integration</Card.Title>
                             <Card.Text>
-                                Sync your schedules seamlessly with your existing calendar to get a comprehensive view of your commitments
+                                Sync your schedules seamlessly with your existing calendar to get a comprehensive view of your 
+                                commitments and objectives
                             </Card.Text>
                             <Button variant="primary">Read More</Button>
                         </Card.Body>

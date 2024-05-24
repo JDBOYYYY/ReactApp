@@ -50,10 +50,10 @@ export const MonthlyReport: React.FC = () => {
         <Col>
           <BasicDatePicker currentDate={currentDate} onDateChange={setCurrentDate} />
         </Col>
-        <Col className="button-print">
-          <Button variant="primary" size="sm">
-            Print
-          </Button>
+        <Col className="text-end">
+          <Button variant="success" className="me-2">Print</Button>
+          <Button variant="success">Excel (csv)</Button>
+          <Button variant="secondary" className="ms-2">Close</Button>
         </Col>
       </Row>
       <Container fluid>
@@ -69,7 +69,6 @@ export const MonthlyReport: React.FC = () => {
                 <col style={{ width: '70px' }} />
                 <col style={{ width: '70px' }} />
                 <col style={{ width: '150px' }} />
-                <col style={{ width: '250px' }} />
               </colgroup>
               <thead>
                 <tr>
