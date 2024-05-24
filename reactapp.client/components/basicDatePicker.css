@@ -1,0 +1,25 @@
+.date-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .date-picker-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .date-picker-container .MuiInputBase-root {
+    width: auto;
+  }
+  
+  .date-picker-container .MuiInputAdornment-root {
+    margin-left: 0;
+  }
+  
+  .date-picker-container button {
+    display: flex;
+    align-items: center;
+  }
+  

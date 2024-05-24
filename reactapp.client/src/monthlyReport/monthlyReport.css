@@ -1,0 +1,39 @@
+.button-print {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-print h2 {
+  margin: 0;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.monthly-report-table {
+  font-size: 0.85em;
+  background-color: #ffffff;
+  border-collapse: collapse;
+}
+
+.monthly-report-table th, .monthly-report-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+}
+
+.monthly-report-table th {
+  background-color: #f8f9fa;
+}
+
+.monthly-report-table .entry-type {
+  background-color: rgb(196, 153, 147);
+  font-weight: bold;
+}
+
+.monthly-report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,34 @@
+.mission-row, .history-row, .team-row, .contact-row {
+    margin-bottom: 30px;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+}
+
+.mission-row, .history-row, .team-row, .contact-row {
+    background-color: #f9f9f9;
+}
+
+.team-name, .team-role {
+    text-align: center;
+}

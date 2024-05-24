@@ -1,6 +1,5 @@
 import { Button, Col, Row } from 'react-bootstrap';
 import './App.css';
-import Footer from '../components/footer';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image'
 import Carousel from 'react-bootstrap/Carousel';
@@ -271,9 +270,6 @@ function App() {
                     </Carousel>
                 </Col>
                 <Col></Col>
-            </Row>
-            <Row>
-                <Footer/>
             </Row>
         </>
     );

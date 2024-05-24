@@ -1,0 +1,59 @@
+.container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .button-width {
+    width: 130px;
+  }
+  
+  .highlight-column {
+    background-color: #f0f0f0 !important;
+  }
+  
+  .centerText .dateDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: -1px;
+  }
+  
+  table {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+  .quick-entries h3 {
+    margin-bottom: 20px;
+  }
+  
+  .time-recording-container {
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .button-width {
+      width: 100%;
+    }
+  
+    .centerText .dateDisplay {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .quick-entries {
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .time-recording-container {
+      padding: 40px 60px;
+    }
+  }
+  

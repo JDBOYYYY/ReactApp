@@ -2,25 +2,25 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 
 export default function Footer() {
   return (
-    <MDBFooter style={{ position: 'sticky', bottom: 0 }}  bgColor='light' className='text-center text-lg-start text-muted'>
+    <MDBFooter style={{ position: 'sticky', bottom: 0 }} bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div>
-          <a href='' className='me-4 text-reset'>
+          <a href='#!' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='facebook-f' />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='#!' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='twitter' />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='#!' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='google' />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='#!' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='instagram' />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='#!' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='linkedin' />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='#!' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='github' />
           </a>
         </div>
@@ -43,22 +43,22 @@ export default function Footer() {
               <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                    Task Scheduler
+                  Task Scheduler
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                    Time Tracker
+                  Time Tracker
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                    Calendar Integration
+                  Calendar Integration
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                    Analytics Dashboard
+                  Analytics Dashboard
                 </a>
               </p>
             </MDBCol>

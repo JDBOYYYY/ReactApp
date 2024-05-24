@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, Outlet } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
 import { Button, Row } from 'react-bootstrap';
+import Footer from '../../components/footer';
 
 function LayoutShowcase() {
     return (
@@ -38,7 +39,11 @@ function LayoutShowcase() {
 
                         </Nav> 
                         <Nav className="me-auto">
-                            <Nav.Link href="#link">About Us</Nav.Link>
+                            <Nav.Link href="">
+                                <Link to="/aboutUs" className="d-block">
+                                    About Us
+                                </Link>
+                            </Nav.Link>
                             <NavDropdown title="Language" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">English</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">German</NavDropdown.Item>
@@ -62,7 +67,11 @@ function LayoutShowcase() {
                 <Container fluid>
                     <Outlet></Outlet>
                 </Container>
-            </div></>
+            </div>
+            <Row>
+                <Footer/>
+            </Row>
+            </>
     );
 }
 

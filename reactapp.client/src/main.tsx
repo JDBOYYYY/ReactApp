@@ -13,6 +13,8 @@ import { Login } from './login/login.page.tsx'
 import { Pricing } from './pricingPage/pricing.page.tsx'
 import LayoutShowcase from './layout/layoutShowcase.tsx'
 import { Features } from './features/features.tsx'
+import { Clients } from './clients/clients.tsx'
+import { AboutUs } from './aboutUs/aboutUs.tsx'
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -27,11 +29,14 @@ if (rootElement) {
                     <Route path = '/pricing' element = {<LayoutShowcase/>}>
                         <Route index element={<Pricing/> }/>
                     </Route>
-                    <Route path = '/pricing' element = {<LayoutShowcase/>}>
-                        <Route index element={<Pricing/> }/>
+                    <Route path = '/clients' element = {<LayoutShowcase/>}>
+                        <Route index element={<Clients/> }/>
                     </Route>
                     <Route path = '/features' element = {<LayoutShowcase/>}>
                         <Route index element={<Features/> }/>
+                    </Route>
+                    <Route path = '/aboutUs' element = {<LayoutShowcase/>}>
+                        <Route index element={<AboutUs/> }/>
                     </Route>
                     <Route path = '/login'>
                         <Route index element={<Login/> }/>
