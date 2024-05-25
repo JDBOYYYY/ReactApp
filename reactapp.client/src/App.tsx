@@ -38,8 +38,8 @@ function App() {
                                     legal recording of working hours. When setting up, the different needs of small and large companies 
                                     are taken into account as required.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                         <Card className='card-hover' style={{ width: '18rem', margin: '20px', flex: '1' ,height:'400px'}}>
@@ -50,8 +50,8 @@ function App() {
                                     hours and facilitates efficient cost control. Project time recording for service providers, consultants, 
                                     craftsmen and industrial companies.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                         <Card className='card-hover' style={{ width: '18rem', margin: '20px', flex: '1' ,height:'400px'}}>
@@ -61,10 +61,10 @@ function App() {
                                     Shift schedule and roster online. Plan the deployment of your employee teams 
                                     for the coming weeks and months for the required presence times and locations. 
                                     Transfer the planned times to the time recording. Employees always receive the latest operational 
-                                    information directly on their smartphone
+                                    information
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                     </Row>
@@ -75,11 +75,11 @@ function App() {
                                 <Card.Text>
                                     The gardener, the carpenter, the plumber, the electrician, the cleaner, the painter, 
                                     the heating fitter or the bricklayer - they all work for the customer and must be planned 
-                                    efficiently. TimeWise supports craft businesses in this process and combines order planning with 
-                                    professional time recording. Centrally planned and displayed on the employee's smartphone.
+                                    efficiently. TimeWise supports craft businesses in this process and combines order planning 
+                                    
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                         <Card className='card-hover' style={{ width: '18rem', margin: '20px', flex: '1',height:'400px' }}>
@@ -90,8 +90,8 @@ function App() {
                                     Do everything with your smartphone such as time recording, duty scheduling, order planning, 
                                     expenses, etc.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                         <Card className='card-hover' style={{ width: '18rem', margin: '20px', flex: '1' ,height:'400px'}}>
@@ -100,11 +100,10 @@ function App() {
                                 <Card.Text>
                                     Our modern system enables the easy exchange of information that is integrated into TimeWise 
                                     from third-party systems or read into other systems by TimeWise. This allows you to achieve 
-                                    greater efficiency and secure data exchange. We would be happy to advise you about the possibilities 
-                                    and useful areas of application.
+                                    greater efficiency and secure data exchange.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                     </Row>
@@ -115,8 +114,8 @@ function App() {
                                 <Card.Text>
                                     The tablet can also be used as a simple clocking device to record employee attendance.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                         <Card className='card-hover' style={{ width: '18rem', margin: '20px', flex: '1',height:'400px' }}>
@@ -126,8 +125,8 @@ function App() {
                                     Our expense management allows you to record expenses quickly and easily along with 
                                     daily working hours. Either by recording on the PC or on the smartphone.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                         <Card className='card-hover' style={{ width: '18rem', margin: '20px', flex: '1',height:'400px' }}>
@@ -137,8 +136,8 @@ function App() {
                                     With electronic working time recording with a stationary time clock, employees' 
                                     attendance times are simply recorded as they walk by.
                                 </Card.Text>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                
+                                
                             </Card.Body>
                         </Card>
                     </Row>
