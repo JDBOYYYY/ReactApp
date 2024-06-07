@@ -1,92 +1,93 @@
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export function Login() {
+    const { t } = useTranslation();
+
     return (
         <Container fluid className='containerClass'>
-            <Row style={{marginTop:'50px'}}>
+            <Row style={{ marginTop: '50px' }}>
                 <Col xs={4}>
-                    <Card style={{ width: '18rem', marginBottom:'20px' }}>
+                    <Card style={{ width: '18rem', marginBottom: '20px' }}>
                         <Card.Img variant="top" src="image/card1.webp" />
                         <Card.Body>
-                            <Card.Title>Task Scheduler</Card.Title>
+                            <Card.Title>{t('taskScheduler')}</Card.Title>
                             <Card.Text>
-                                Organize your day with a powerful task scheduler that allows you to set priorities, 
-                                due dates, and reminders for your tasks.
+                                {t('taskSchedulerDescription')}
                             </Card.Text>
-                            <Button variant="primary">Read More</Button>
+                            <Button variant="primary">{t('readMore')}</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '18rem', marginBottom:'20px' }}>
+                    <Card style={{ width: '18rem', marginBottom: '20px' }}>
                         <Card.Img variant="top" src="image/card2.webp" />
                         <Card.Body>
-                            <Card.Title>Time Tracker</Card.Title>
+                            <Card.Title>{t('timeTracker')}</Card.Title>
                             <Card.Text>
-                                Keep track of how much time you spend on each task with an 
-                                intuitive time tracker
+                                {t('timeTrackerDescription')}
                             </Card.Text>
-                            <Button variant="primary">Read More</Button>
+                            <Button variant="primary">{t('readMore')}</Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col xs={4}>
-                    <Card style={{ width: '18rem', marginBottom:'20px' }}>
+                    <Card style={{ width: '18rem', marginBottom: '20px' }}>
                         <Card.Img variant="top" src="image/card3.webp" />
                         <Card.Body>
-                            <Card.Title>Calendar Integration</Card.Title>
+                            <Card.Title>{t('calendarIntegration')}</Card.Title>
                             <Card.Text>
-                                Sync your schedules seamlessly with your existing calendar to get a comprehensive view of your 
-                                commitments and objectives
+                                {t('calendarIntegrationDescription')}
                             </Card.Text>
-                            <Button variant="primary">Read More</Button>
+                            <Button variant="primary">{t('readMore')}</Button>
                         </Card.Body>
                     </Card>
-                    <Card style={{ width: '18rem' ,marginBottom:'20px' }}>
+                    <Card style={{ width: '18rem', marginBottom: '20px' }}>
                         <Card.Img variant="top" src="image/card4.webp" />
                         <Card.Body>
-                            <Card.Title>Analytics Dashboard</Card.Title>
+                            <Card.Title>{t('analyticsDashboard')}</Card.Title>
                             <Card.Text>
-                                Gain insights into your time management with detailed analytics and reporting features
+                                {t('analyticsDashboardDescription')}
                             </Card.Text>
-                            <Button variant="primary">Read More</Button>
+                            <Button variant="primary">{t('readMore')}</Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col className='login-form'>
-                <Form>
-                    <div className='login-form-image'>
-                        <Image src = "image/logo.webp" className="logo" />
-                    </div>
-                    <Form.Group className="mb-3" controlId="formBasicCompany">
-                        <Form.Control type="text" placeholder="Enter companyId" />
-                        <Form.Text className="text-muted">
-                        </Form.Text>
-                    </Form.Group>
-                    
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                        </Form.Text>
-                    </Form.Group>
+                    <Form>
+                        <div className='login-form-image'>
+                            <Image src="image/logo.webp" className="logo" />
+                        </div>
+                        <Form.Group className="mb-3" controlId="formBasicCompany">
+                            <Form.Control type="text" placeholder={t('enterCompanyId')} />
+                            <Form.Text className="text-muted">
+                            </Form.Text>
+                        </Form.Group>
+                        
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Control type="email" placeholder={t('enterEmail')} />
+                            <Form.Text className="text-muted">
+                            </Form.Text>
+                        </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <div className='button-container'>
-                        <Link to="/timeRecording" className="d-block">
-                            <Button variant="primary" type="submit" >
-                                Login
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Control type="password" placeholder={t('enterPassword')} />
+                        </Form.Group>
+                        <div className='button-container'>
+                            <Link to="/timeRecording" className="d-block">
+                                <Button variant="primary" type="submit">
+                                    {t('login')}
+                                </Button>
+                            </Link>
+                            <Button variant="primary" type="submit">
+                                {t('register')}
                             </Button>
-                        </Link>
-                        <Button variant="primary" type="submit">
-                            Register
-                        </Button>
-                    </div>
-                </Form>
+                        </div>
+                    </Form>
                 </Col>
             </Row>
         </Container>

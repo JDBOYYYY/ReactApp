@@ -15,6 +15,7 @@ import LayoutShowcase from './layout/layoutShowcase.tsx'
 import { Features } from './features/features.tsx'
 import { Clients } from './clients/clients.tsx'
 import { AboutUs } from './aboutUs/aboutUs.tsx'
+import '../i18n.js'; 
 
 const rootElement = document.getElementById("root");
 if (rootElement) {

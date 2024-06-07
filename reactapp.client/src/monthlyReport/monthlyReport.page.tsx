@@ -3,6 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import dayjs, { Dayjs } from 'dayjs';
 import BasicDatePicker from '../../components/Picker';
+import { useTranslation } from 'react-i18next';
 import './monthlyReport.css'; // Make sure to create this CSS file
 
 interface TimeEntry {
@@ -35,6 +36,7 @@ const generateMonthData = (year: number, month: number): MonthData => {
 };
 
 export const MonthlyReport: React.FC = () => {
+  const { t } = useTranslation();
   const today = new Date();
   const [currentDate, setCurrentDate] = useState<Dayjs>(dayjs(today));
 
@@ -44,16 +46,16 @@ export const MonthlyReport: React.FC = () => {
     <>
       <Row>
         <Col>
-          <h2>Report of {currentDate.format('MMMM YYYY')}</h2>
-          <p>Szymon Zimonczyk (Software Development)</p>
+          <h2>{t('monthlyReportTitle', { monthYear: currentDate.format('MMMM YYYY') })}</h2>
+          <p>{t('employeeName')}</p>
         </Col>
         <Col>
           <BasicDatePicker currentDate={currentDate} onDateChange={setCurrentDate} />
         </Col>
         <Col className="text-end">
-          <Button variant="success" className="me-2">Print</Button>
-          <Button variant="success">Excel (csv)</Button>
-          <Button variant="secondary" className="ms-2">Close</Button>
+          <Button variant="success" className="me-2">{t('print')}</Button>
+          <Button variant="success">{t('excel')}</Button>
+          <Button variant="secondary" className="ms-2">{t('close')}</Button>
         </Col>
       </Row>
       <Container fluid>
@@ -72,15 +74,15 @@ export const MonthlyReport: React.FC = () => {
               </colgroup>
               <thead>
                 <tr>
-                  <th>Day</th>
-                  <th>From</th>
-                  <th>To</th>
-                  <th>Hrs</th>
-                  <th>+</th>
-                  <th>Targ.</th>
-                  <th>Diff.</th>
-                  <th>Entry type</th>
-                  <th>Notes</th>
+                  <th>{t('day')}</th>
+                  <th>{t('from')}</th>
+                  <th>{t('to')}</th>
+                  <th>{t('hrs')}</th>
+                  <th>{t('plus')}</th>
+                  <th>{t('target')}</th>
+                  <th>{t('difference')}</th>
+                  <th>{t('entryType')}</th>
+                  <th>{t('notes')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,7 +102,7 @@ export const MonthlyReport: React.FC = () => {
                       </tr>
                     ))}
                     <tr>
-                      <td colSpan={3}>Subtotal</td>
+                      <td colSpan={3}>{t('subtotal')}</td>
                       <td>8</td>
                       <td>8:30</td>
                       <td>-0:30</td>

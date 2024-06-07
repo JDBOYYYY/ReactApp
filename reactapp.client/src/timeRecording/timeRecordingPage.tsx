@@ -13,10 +13,13 @@ import EndIcon from '@mui/icons-material/Stop';
 import BreakStartIcon from '@mui/icons-material/Coffee';
 import BreakEndIcon from '@mui/icons-material/CheckCircle';
 import OvertimeIcon from '@mui/icons-material/AccessTime';
+import { useTranslation } from 'react-i18next';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export const TimeRecording = () => {
+  const { t } = useTranslation();
+
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [weekDates, setWeekDates] = useState<Date[]>([]);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -87,7 +90,7 @@ export const TimeRecording = () => {
     labels: weekDates.map((date) => date.toLocaleDateString('en-US', { weekday: 'long' })),
     datasets: [
       {
-        label: 'Registered Time (hours)',
+        label: t('registeredTimeHours'),
         data: weekDates.map(() => Math.floor(Math.random() * 8)), // Example data
         backgroundColor: 'rgba(75, 192, 192, 0.6)',
       },
@@ -102,7 +105,7 @@ export const TimeRecording = () => {
       },
       title: {
         display: true,
-        text: 'Time Registered Per Day',
+        text: t('timeRegisteredPerDay'),
       },
     },
   };
@@ -116,7 +119,7 @@ export const TimeRecording = () => {
         </Col>
         <Col md={3} className="text-center quick-entries">
           <Typography variant="h5" gutterBottom>
-            Quick Entries
+            {t('quickEntries')}
           </Typography>
           <Box display="grid" gridTemplateColumns="1fr 1fr" gap={2}>
             <MuiButton
@@ -124,45 +127,45 @@ export const TimeRecording = () => {
               color="primary"
               className="button-width"
               startIcon={<StartIcon />}
-              title="Start your shift"
+              title={t('startShift')}
             >
-              Start Shift
+              {t('startShift')}
             </MuiButton>
             <MuiButton
               variant="contained"
               color="primary"
               className="button-width"
               startIcon={<EndIcon />}
-              title="End your shift"
+              title={t('endShift')}
             >
-              End Shift
+              {t('endShift')}
             </MuiButton>
             <MuiButton
               variant="contained"
               color="primary"
               className="button-width"
               startIcon={<BreakStartIcon />}
-              title="Start your break"
+              title={t('breakStart')}
             >
-              Break Start
+              {t('breakStart')}
             </MuiButton>
             <MuiButton
               variant="contained"
               color="primary"
               className="button-width"
               startIcon={<BreakEndIcon />}
-              title="End your break"
+              title={t('breakEnd')}
             >
-              Break End
+              {t('breakEnd')}
             </MuiButton>
             <MuiButton
               variant="contained"
               color="primary"
               className="button-width"
               startIcon={<OvertimeIcon />}
-              title="Add overtime"
+              title={t('addOvertime')}
             >
-              Add Overtime
+              {t('addOvertime')}
             </MuiButton>
           </Box>
         </Col>
@@ -185,12 +188,12 @@ export const TimeRecording = () => {
                     {date.toLocaleDateString('en-US', { day: '2-digit', month: '2-digit' })}
                   </th>
                 ))}
-                <th>Total</th>
+                <th>{t('total')}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Target Time</td>
+                <td>{t('targetTime')}</td>
                 {weekDates.map((date, i) => (
                   <td key={i} onClick={() => handleDateClick(date)} onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
                     0:00
@@ -199,7 +202,7 @@ export const TimeRecording = () => {
                 <td>0:00</td>
               </tr>
               <tr>
-                <td>Registered Time</td>
+                <td>{t('registeredTime')}</td>
                 {weekDates.map((date, i) => (
                   <td key={i} onClick={() => handleDateClick(date)} onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
                     0:00
@@ -208,7 +211,7 @@ export const TimeRecording = () => {
                 <td>0:00</td>
               </tr>
               <tr>
-                <td>Difference</td>
+                <td>{t('difference')}</td>
                 {weekDates.map((date, i) => (
                   <td key={i} onClick={() => handleDateClick(date)} onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
                     0:00
@@ -229,8 +232,8 @@ export const TimeRecording = () => {
       </Row>
       <Row className="my-4">
         <Col md={12} className="d-flex justify-content-center">
-          <MuiButton variant="outlined">Time Recording</MuiButton>{' '}
-          <MuiButton variant="outlined" style={{ marginLeft: '10px' }}>Expenses</MuiButton>
+          <MuiButton variant="outlined">{t('timeRecording')}</MuiButton>{' '}
+          <MuiButton variant="outlined" style={{ marginLeft: '10px' }}>{t('expenses')}</MuiButton>
         </Col>
       </Row>
       <Row>
@@ -238,14 +241,14 @@ export const TimeRecording = () => {
           <Table striped bordered>
             <thead>
               <tr>
-                <th>Date</th>
-                <th>From</th>
-                <th>To</th>
-                <th>Hours</th>
-                <th>Entry Type</th>
-                <th>Project</th>
-                <th>Notes</th>
-                <th>Edit</th>
+                <th>{t('date')}</th>
+                <th>{t('from')}</th>
+                <th>{t('to')}</th>
+                <th>{t('hours')}</th>
+                <th>{t('entryType')}</th>
+                <th>{t('project')}</th>
+                <th>{t('notes')}</th>
+                <th>{t('edit')}</th>
               </tr>
             </thead>
             <tbody>
@@ -272,7 +275,7 @@ export const TimeRecording = () => {
       <Row>
         <Col md={12} className="d-flex justify-content-end">
           <MuiButton variant="contained" color="primary" onClick={handleOpen}>
-            Add Entry
+            {t('addEntry')}
           </MuiButton>
           <AddTimeEntryForm
             open={modalOpen}

@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import Modal from '@mui/material/Modal';
 import dayjs from 'dayjs';
+import { useTranslation } from 'react-i18next';
 
 const style = {
   position: 'absolute' as const,
@@ -23,6 +24,8 @@ interface AddTimeEntryFormProps {
 }
 
 const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, handleAddEntry, existingEntry }) => {
+  const { t } = useTranslation();
+
   const [from, setFrom] = React.useState<string>(existingEntry?.from || '');
   const [to, setTo] = React.useState<string>(existingEntry?.to || '');
   const [hours, setHours] = React.useState<string>(existingEntry?.hours || '');
@@ -76,14 +79,14 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
     >
       <Box sx={style}>
         <Typography id="modal-title" variant="h6" component="h2">
-          {existingEntry ? 'Edit Time Entry' : 'Add Time Entry'}
+          {existingEntry ? t('editTimeEntry') : t('addTimeEntry')}
         </Typography>
         <Box component="form" noValidate autoComplete="off">
           <TextField
             margin="normal"
             fullWidth
             id="from"
-            label="From"
+            label={t('from')}
             type="time"
             InputLabelProps={{
               shrink: true,
@@ -95,7 +98,7 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
             margin="normal"
             fullWidth
             id="to"
-            label="To"
+            label={t('to')}
             type="time"
             InputLabelProps={{
               shrink: true,
@@ -107,7 +110,7 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
             margin="normal"
             fullWidth
             id="hours"
-            label="Hours (H:mm)"
+            label={t('hours')}
             placeholder="H:mm"
             value={hours}
             onChange={handleHoursChange}
@@ -117,7 +120,7 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
             required
             fullWidth
             id="entryType"
-            label="Entry Type"
+            label={t('entryType')}
             value={entryType}
             onChange={(e) => setEntryType(e.target.value)}
           />
@@ -126,7 +129,7 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
             required
             fullWidth
             id="project"
-            label="Project"
+            label={t('project')}
             value={project}
             onChange={(e) => setProject(e.target.value)}
           />
@@ -134,7 +137,7 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
             margin="normal"
             fullWidth
             id="notes"
-            label="Notes"
+            label={t('notes')}
             multiline
             rows={4}
             value={notes}
@@ -147,7 +150,7 @@ const AddTimeEntryForm: React.FC<AddTimeEntryFormProps> = ({ open, handleClose, 
             sx={{ mt: 2 }}
             disabled={!isFormValid}
           >
-            {existingEntry ? 'Save Changes' : 'Add Entry'}
+            {existingEntry ? t('saveChanges') : t('addEntry')}
           </Button>
         </Box>
       </Box>
