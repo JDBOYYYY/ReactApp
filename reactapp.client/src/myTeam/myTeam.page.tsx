@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Table, Card } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import { useConfig } from '../ConfigContext';
 import './myTeam.css';
 
 export const MyTeam = () => {
   const { t } = useTranslation();
+  const { primaryColor } = useConfig();
 
   const [teamMembers, setTeamMembers] = useState([
     { id: 1, name: 'John Doe', email: 'john.doe@example.com', role: t('developer') },
@@ -96,7 +98,7 @@ export const MyTeam = () => {
                     <option value="Tester">{t('tester')}</option>
                   </Form.Control>
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('addMember')}
                 </Button>
               </Form>

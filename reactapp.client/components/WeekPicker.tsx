@@ -7,6 +7,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateCalendar, PickersDay, PickersDayProps } from '@mui/x-date-pickers';
 import 'dayjs/locale/en-gb';
+import { useConfig } from '../src/ConfigContext';
 
 dayjs.extend(isBetweenPlugin);
 dayjs.locale('en-gb'); // Setting the locale to 'en-gb' which starts the week on Monday
@@ -14,23 +15,24 @@ dayjs.locale('en-gb'); // Setting the locale to 'en-gb' which starts the week on
 interface CustomPickerDayProps extends PickersDayProps<Dayjs> {
   isSelected: boolean;
   isHovered: boolean;
+  primaryColor: string;
 }
 
 const CustomPickersDay = styled(PickersDay, {
-  shouldForwardProp: (prop) => prop !== 'isSelected' && prop !== 'isHovered',
-})<CustomPickerDayProps>(({ theme, isSelected, isHovered, day }) => ({
+  shouldForwardProp: (prop) => prop !== 'isSelected' && prop !== 'isHovered' && prop !== 'primaryColor',
+})<CustomPickerDayProps>(({ theme, isSelected, isHovered, primaryColor, day }) => ({
   borderRadius: 0,
   ...(isSelected && {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
+    backgroundColor: theme.palette[primaryColor].main,
+    color: theme.palette[primaryColor].contrastText,
     '&:hover, &:focus': {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette[primaryColor].main,
     },
   }),
   ...(isHovered && {
-    backgroundColor: theme.palette.primary[theme.palette.mode],
+    backgroundColor: theme.palette[primaryColor][theme.palette.mode],
     '&:hover, &:focus': {
-      backgroundColor: theme.palette.primary[theme.palette.mode],
+      backgroundColor: theme.palette[primaryColor][theme.palette.mode],
     },
   }),
   ...(day.day() === 1 && {
@@ -54,9 +56,10 @@ function Day(
   props: PickersDayProps<Dayjs> & {
     selectedDay?: Dayjs | null;
     hoveredDay?: Dayjs | null;
+    primaryColor: string;
   },
 ) {
-  const { day, selectedDay, hoveredDay, ...other } = props;
+  const { day, selectedDay, hoveredDay, primaryColor, ...other } = props;
   return (
     <CustomPickersDay
       {...other}
@@ -66,11 +69,13 @@ function Day(
       selected={false}
       isSelected={isInSameWeek(day, selectedDay)}
       isHovered={isInSameWeek(day, hoveredDay)}
+      primaryColor={primaryColor}
     />
   );
 }
 
 export default function WeekPicker({ selectedDate, setSelectedDate }: { selectedDate: Date, setSelectedDate: (date: Date) => void }) {
+  const { primaryColor } = useConfig();
   const [hoveredDay, setHoveredDay] = React.useState<Dayjs | null>(null);
   const [currentMonth, setCurrentMonth] = React.useState<Dayjs>(dayjs(selectedDate));
 
@@ -100,6 +105,7 @@ export default function WeekPicker({ selectedDate, setSelectedDate }: { selected
             ({
               selectedDay: dayjs(selectedDate),
               hoveredDay,
+              primaryColor,
               onPointerEnter: () => setHoveredDay(ownerState.day),
               onPointerLeave: () => setHoveredDay(null),
             }) as any,

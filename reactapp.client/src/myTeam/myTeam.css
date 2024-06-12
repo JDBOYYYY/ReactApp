@@ -35,13 +35,8 @@
 }
 
 .team-page-container .btn-primary {
-  background-color: #007bff;
   border: none;
   transition: background-color 0.3s ease;
-}
-
-.team-page-container .btn-primary:hover {
-  background-color: #0056b3;
 }
 
 .team-page-container .form-check-label {

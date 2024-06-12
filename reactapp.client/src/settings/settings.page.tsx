@@ -1,10 +1,12 @@
-import React from 'react';
+
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import { useConfig } from '../ConfigContext';
 import './settings.css';
 
 export const Settings = () => {
   const { t } = useTranslation();
+  const { primaryColor } = useConfig();
 
   return (
     <Container fluid className="settings-page-container">
@@ -27,7 +29,7 @@ export const Settings = () => {
                   <Form.Label>{t('phone')}</Form.Label>
                   <Form.Control type="text" placeholder={t('enterYourPhoneNumber')} />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveProfile')}
                 </Button>
               </Form>
@@ -47,7 +49,7 @@ export const Settings = () => {
                   <Form.Label>{t('password')}</Form.Label>
                   <Form.Control type="password" placeholder={t('enterYourPassword')} />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveAccount')}
                 </Button>
               </Form>
@@ -79,7 +81,7 @@ export const Settings = () => {
                   label={t('pushNotifications')}
                   className="mb-3"
                 />
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveNotifications')}
                 </Button>
               </Form>
@@ -109,7 +111,7 @@ export const Settings = () => {
                   label={t('dataSharing')}
                   className="mb-3"
                 />
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('savePrivacy')}
                 </Button>
               </Form>
@@ -135,7 +137,7 @@ export const Settings = () => {
                   <Form.Label>{t('twoFactorAuth')}</Form.Label>
                   <Form.Check type="switch" id="enableTwoFactorAuth" label={t('enableTwoFactorAuth')} />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveSecurity')}
                 </Button>
               </Form>
@@ -157,7 +159,7 @@ export const Settings = () => {
                     <option>Chinese</option>
                   </Form.Control>
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveLanguage')}
                 </Button>
               </Form>
@@ -180,7 +182,7 @@ export const Settings = () => {
                     <option>Enterprise</option>
                   </Form.Control>
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveSubscription')}
                 </Button>
               </Form>
@@ -204,7 +206,7 @@ export const Settings = () => {
                   label={t('highContrastMode')}
                   className="mb-3"
                 />
-                <Button variant="primary" type="submit">
+                <Button variant={primaryColor} type="submit">
                   {t('saveTheme')}
                 </Button>
               </Form>

@@ -1,38 +1,37 @@
 .year-report-container {
-    padding: 20px;
-    background-color: #f8f9fa;
-  }
-  
-  .year-report-container h2 {
-    margin-bottom: 10px;
-  }
-  
-  .yearly-report-table {
-    font-size: 0.85em;
-    background-color: #ffffff;
-    border-collapse: collapse;
-  }
-  
-  .yearly-report-table th, .yearly-report-table td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 8px;
-  }
-  
-  .yearly-report-table th {
-    background-color: #f8f9fa;
-  }
-  
-  .yearly-report-table .section-header {
-    background-color: #e9ecef;
-    font-weight: bold;
-  }
-  
-  .yearly-report-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .text-end {
-    text-align: end;
-  }
-  
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.year-report-container h2 {
+  margin-bottom: 10px;
+}
+
+.yearly-report-table {
+  font-size: 0.85em;
+  background-color: #ffffff;
+  border-collapse: collapse;
+}
+
+.yearly-report-table th, .yearly-report-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+}
+
+.yearly-report-table th {
+  background-color: #f8f9fa;
+}
+
+.yearly-report-table .section-header {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+.yearly-report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.text-end {
+  text-align: end;
+}

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import './TimeRecording.css';
@@ -14,11 +13,13 @@ import BreakStartIcon from '@mui/icons-material/Coffee';
 import BreakEndIcon from '@mui/icons-material/CheckCircle';
 import OvertimeIcon from '@mui/icons-material/AccessTime';
 import { useTranslation } from 'react-i18next';
+import { useConfig } from '../ConfigContext';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export const TimeRecording = () => {
   const { t } = useTranslation();
+  const { primaryColor } = useConfig();
 
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [weekDates, setWeekDates] = useState<Date[]>([]);
@@ -124,7 +125,7 @@ export const TimeRecording = () => {
           <Box display="grid" gridTemplateColumns="1fr 1fr" gap={2}>
             <MuiButton
               variant="contained"
-              color="primary"
+              color={primaryColor}
               className="button-width"
               startIcon={<StartIcon />}
               title={t('startShift')}
@@ -133,7 +134,7 @@ export const TimeRecording = () => {
             </MuiButton>
             <MuiButton
               variant="contained"
-              color="primary"
+              color={primaryColor}
               className="button-width"
               startIcon={<EndIcon />}
               title={t('endShift')}
@@ -142,7 +143,7 @@ export const TimeRecording = () => {
             </MuiButton>
             <MuiButton
               variant="contained"
-              color="primary"
+              color={primaryColor}
               className="button-width"
               startIcon={<BreakStartIcon />}
               title={t('breakStart')}
@@ -151,7 +152,7 @@ export const TimeRecording = () => {
             </MuiButton>
             <MuiButton
               variant="contained"
-              color="primary"
+              color={primaryColor}
               className="button-width"
               startIcon={<BreakEndIcon />}
               title={t('breakEnd')}
@@ -160,7 +161,7 @@ export const TimeRecording = () => {
             </MuiButton>
             <MuiButton
               variant="contained"
-              color="primary"
+              color={primaryColor}
               className="button-width"
               startIcon={<OvertimeIcon />}
               title={t('addOvertime')}
@@ -274,7 +275,7 @@ export const TimeRecording = () => {
       </Row>
       <Row>
         <Col md={12} className="d-flex justify-content-end">
-          <MuiButton variant="contained" color="primary" onClick={handleOpen}>
+          <MuiButton variant="contained" color={primaryColor} onClick={handleOpen}>
             {t('addEntry')}
           </MuiButton>
           <AddTimeEntryForm

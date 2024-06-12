@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, Outlet } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
-import { Button, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Footer from '../../components/footer';
 import LangSwitcher from '../../components/LangSwitcher';
 import { useTranslation } from 'react-i18next';
@@ -40,14 +40,6 @@ function LayoutShowcase() {
                                 </Nav.Link>
 
                                 <LangSwitcher />
-
-                                <Nav.Item className="ms-auto">
-                                    <Link to="/login" className="d-block">
-                                        <Button variant="primary" type="submit">
-                                            {t('login')}
-                                        </Button>
-                                    </Link>
-                                </Nav.Item>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

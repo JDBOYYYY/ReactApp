@@ -1,66 +1,96 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.js'
-import './index.css'
-import { Routes, BrowserRouter, Route } from 'react-router-dom'
-import Layout from './layout/layout.tsx'
-import { TimeRecording } from './timeRecording/timeRecordingPage.tsx'
-import { MonthlyReport } from './monthlyReport/monthlyReport.page.tsx'
-import { MyTeam } from './myTeam/myTeam.page.tsx'
-import { Settings } from './settings/settings.page.tsx'
-import { YearReport } from './yearReport/yearReport.page.tsx'
-import { Login } from './login/login.page.tsx'
-import { Pricing } from './pricingPage/pricing.page.tsx'
-import LayoutShowcase from './layout/layoutShowcase.tsx'
-import { Features } from './features/features.tsx'
-import { Clients } from './clients/clients.tsx'
-import { AboutUs } from './aboutUs/aboutUs.tsx'
-import '../i18n.js'; 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+import { Routes, BrowserRouter, Route, useParams, Navigate } from 'react-router-dom';
+import Layout from './layout/layout';
+import { TimeRecording } from './timeRecording/timeRecordingPage';
+import { MonthlyReport } from './monthlyReport/monthlyReport.page';
+import { MyTeam } from './myTeam/myTeam.page';
+import { Settings } from './settings/settings.page';
+import { YearReport } from './yearReport/yearReport.page';
+import { Login } from './login/login.page';
+import { Pricing } from './pricingPage/pricing.page';
+import { Features } from './features/features';
+import { Clients } from './clients/clients';
+import { AboutUs } from './aboutUs/aboutUs';
+import '../i18n';
 
-const rootElement = document.getElementById("root");
+import { ConfigProvider } from './ConfigContext';
+import { getClientConfig } from './configLoader';
+import LayoutShowcase from './layout/layoutShowcase';
+
+// Client-specific layout component
+const ClientLayout: React.FC = () => {
+    const { client } = useParams<{ client: string }>();
+    if (!client) {
+        return <Navigate to="/client1/login" />; // Redirect to default client if no client is specified
+    }
+
+    const config = getClientConfig(client);
+
+    return (
+        <ConfigProvider config={config}>
+            <Layout />
+        </ConfigProvider>
+    );
+};
+
+// Client-specific route without layout
+const ClientRoute: React.FC<{ component: React.FC }> = ({ component: Component }) => {
+    const { client } = useParams<{ client: string }>();
+    if (!client) {
+        return <Navigate to="/client1/login" />; // Redirect to default client if no client is specified
+    }
+
+    const config = getClientConfig(client);
+
+    return (
+        <ConfigProvider config={config}>
+            <Component />
+        </ConfigProvider>
+    );
+};
+
+const rootElement = document.getElementById('root');
 if (rootElement) {
     ReactDOM.createRoot(rootElement).render(
         <React.StrictMode>
-            {/* <RouterProvider router={router} /> */}
             <BrowserRouter>
                 <Routes>
-                    <Route path = '/' element = {<LayoutShowcase/>}>
-                        <Route index element={<App/> }/>
+                    {/* Showcase routes */}
+                    <Route path="/" element={<LayoutShowcase />}>
+                        <Route index element={<App />} />
                     </Route>
-                    <Route path = '/pricing' element = {<LayoutShowcase/>}>
-                        <Route index element={<Pricing/> }/>
+                    <Route path="/pricing" element={<LayoutShowcase />}>
+                        <Route index element={<Pricing />} />
                     </Route>
-                    <Route path = '/clients' element = {<LayoutShowcase/>}>
-                        <Route index element={<Clients/> }/>
+                    <Route path="/clients" element={<LayoutShowcase />}>
+                        <Route index element={<Clients />} />
                     </Route>
-                    <Route path = '/features' element = {<LayoutShowcase/>}>
-                        <Route index element={<Features/> }/>
+                    <Route path="/features" element={<LayoutShowcase />}>
+                        <Route index element={<Features />} />
                     </Route>
-                    <Route path = '/aboutUs' element = {<LayoutShowcase/>}>
-                        <Route index element={<AboutUs/> }/>
-                    </Route>
-                    <Route path = '/login'>
-                        <Route index element={<Login/> }/>
-                    </Route>
-                    <Route path='/timeRecording' element={<Layout />}>
-                        <Route index element={< TimeRecording />} />
-                    </Route>
-                    <Route path='/monthlyReport' element={<Layout />}>
-                        <Route index element={< MonthlyReport />} />
-                    </Route>
-                    <Route path='/yearReport' element={<Layout />}>
-                        <Route index element={< YearReport />} />
-                    </Route>
-                    <Route path='/myTeam' element={<Layout />}>
-                        <Route index element={< MyTeam />} />
-                    </Route>
-                    <Route path='/settings' element={<Layout />}>
-                        <Route index element={< Settings />} />
+                    <Route path="/aboutUs" element={<LayoutShowcase />}>
+                        <Route index element={<AboutUs />} />
                     </Route>
 
-                    
+                    <Route path="/:client/login" element={<ClientRoute component={Login} />} />
 
+                    <Route path="/:client/*" element={<ClientLayout />}>
+                        <Route path="pricing" element={<Pricing />} />
+                        <Route path="clients" element={<Clients />} />
+                        <Route path="features" element={<Features />} />
+                        <Route path="aboutUs" element={<AboutUs />} />
+                        <Route path="timeRecording" element={<TimeRecording />} />
+                        <Route path="monthlyReport" element={<MonthlyReport />} />
+                        <Route path="yearReport" element={<YearReport />} />
+                        <Route path="myTeam" element={<MyTeam />} />
+                        <Route path="settings" element={<Settings />} />
+                    </Route>
                     
+                    {/* Redirect to default client if no path matches */}
+                    <Route path="*" element={<Navigate to="/client1/home" />} />
                 </Routes>
             </BrowserRouter>
         </React.StrictMode>
@@ -68,4 +98,3 @@ if (rootElement) {
 } else {
     console.error('Failed to find the root element');
 }
-

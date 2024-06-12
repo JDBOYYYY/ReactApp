@@ -4,6 +4,7 @@ import YearPicker from '../../components/YearPicker';
 import './yearReport.css';
 import dayjs, { Dayjs } from 'dayjs';
 import { useTranslation } from 'react-i18next';
+import { useConfig } from '../ConfigContext';
 
 interface ReportData {
   month: string;
@@ -30,6 +31,7 @@ const data: ReportData[] = [
 
 export const YearReport: React.FC = () => {
   const { t } = useTranslation();
+  const { primaryColor } = useConfig();
   const today = new Date();
   const [currentDate, setCurrentDate] = useState<Dayjs>(dayjs(today));
 
@@ -44,8 +46,8 @@ export const YearReport: React.FC = () => {
           <YearPicker currentDate={currentDate} onDateChange={setCurrentDate} />
         </Col>
         <Col className="text-end">
-          <Button variant="success" className="me-2">{t('print')}</Button>
-          <Button variant="success">Excel (csv)</Button>
+          <Button variant={primaryColor} className="me-2">{t('print')}</Button>
+          <Button variant={primaryColor}>Excel (csv)</Button>
           <Button variant="secondary" className="ms-2">{t('close')}</Button>
         </Col>
       </Row>

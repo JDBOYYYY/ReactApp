@@ -4,7 +4,8 @@ import Table from 'react-bootstrap/Table';
 import dayjs, { Dayjs } from 'dayjs';
 import BasicDatePicker from '../../components/Picker';
 import { useTranslation } from 'react-i18next';
-import './monthlyReport.css'; // Make sure to create this CSS file
+import { useConfig } from '../ConfigContext';
+import './monthlyReport.css';
 
 interface TimeEntry {
   from: string;
@@ -37,6 +38,7 @@ const generateMonthData = (year: number, month: number): MonthData => {
 
 export const MonthlyReport: React.FC = () => {
   const { t } = useTranslation();
+  const { primaryColor } = useConfig();
   const today = new Date();
   const [currentDate, setCurrentDate] = useState<Dayjs>(dayjs(today));
 
@@ -53,8 +55,8 @@ export const MonthlyReport: React.FC = () => {
           <BasicDatePicker currentDate={currentDate} onDateChange={setCurrentDate} />
         </Col>
         <Col className="text-end">
-          <Button variant="success" className="me-2">{t('print')}</Button>
-          <Button variant="success">{t('excel')}</Button>
+          <Button variant={primaryColor} className="me-2">{t('print')}</Button>
+          <Button variant={primaryColor}>{t('excel')}</Button>
           <Button variant="secondary" className="ms-2">{t('close')}</Button>
         </Col>
       </Row>

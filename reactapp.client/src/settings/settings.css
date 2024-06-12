@@ -35,13 +35,8 @@
 }
 
 .settings-page-container .btn-primary {
-  background-color: #007bff;
   border: none;
   transition: background-color 0.3s ease;
-}
-
-.settings-page-container .btn-primary:hover {
-  background-color: #0056b3;
 }
 
 .settings-page-container .form-check-label {
